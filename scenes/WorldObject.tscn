@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://b3v8l34p2dr7c"]
+
+[ext_resource type="Script" uid="uid://dm8fcwy62tkou" path="res://garlic.gd" id="1_sacrv"]
+[ext_resource type="Texture2D" uid="uid://bm11t4li5gnn6" path="res://resources/sprites/onion.png" id="2_xd6p8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sc6fy"]
+radius = 8.0
+
+[node name="WorldObject" type="Area2D"]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_sacrv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_sc6fy")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_xd6p8")

@@ -1,7 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://dagxdcxeoarrp"]
+[gd_scene load_steps=3 format=3 uid="uid://dagxdcxeoarrp"]
 
 [ext_resource type="PackedScene" uid="uid://btn7pug5ptjs6" path="res://Player.tscn" id="1_f3sb7"]
+[ext_resource type="PackedScene" uid="uid://b3v8l34p2dr7c" path="res://scenes/WorldObject.tscn" id="2_fj7yv"]
 
 [node name="World" type="Node2D"]
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("1_f3sb7")]
+[node name="Player" parent="." instance=ExtResource("1_f3sb7")]
+
+[node name="WorldObject" parent="." instance=ExtResource("2_fj7yv")]
+position = Vector2(30, 5)
