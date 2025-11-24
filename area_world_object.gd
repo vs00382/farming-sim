@@ -49,6 +49,26 @@ func _on_body_entered(body: Node2D):
 
 func pickup_item():
 	print("Picked up:", data.display_name)
+	
+	# 1. Play the sound
+	$PickupSound.play() 
+	
+	# 2. Prevent the object from being removed immediately
+	#    We need to wait for the sound to finish playing before freeing the node.
+	
+	# 3. Disconnect body_entered to prevent accidental multiple pickups
+	body_entered.disconnect(_on_body_entered) 
+	
+	# 4. Hide the sprite and collision to make it disappear instantly
+	$Sprite2D.visible = false
+	$CollisionShape2D.disabled = true
+	
+	# 5. Connect the signal that tells us when the audio finishes
+	$PickupSound.finished.connect(_on_pickup_sound_finished)
+
+# New function: called automatically when the sound finishes playing
+func _on_pickup_sound_finished():
+	# Now it's safe to remove the object
 	queue_free()
 
 func show_text():
