@@ -1,7 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://b3v8l34p2dr7c"]
+[gd_scene load_steps=3 format=3 uid="uid://b3v8l34p2dr7c"]
 
 [ext_resource type="Script" uid="uid://de5ii1kesda42" path="res://scripts/generics/world_object.gd" id="1_sacrv"]
-[ext_resource type="Texture2D" uid="uid://bm11t4li5gnn6" path="res://resources/sprites/garlic.png" id="2_xd6p8"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_sc6fy"]
 radius = 8.0
@@ -15,4 +14,3 @@ script = ExtResource("1_sacrv")
 shape = SubResource("CircleShape2D_sc6fy")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_xd6p8")

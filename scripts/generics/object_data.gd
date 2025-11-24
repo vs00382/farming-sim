@@ -1,18 +1,28 @@
 extends Resource
 class_name ObjectData
 
-@export var id: String
-@export var display_name: String = "Object"
-@export var sprite: Texture2D
-
+# --- Core Data ---
+@export var id: String = "default_id"
+@export var display_name: String = "Generic Object"
 @export_enum("none", "crop", "item", "sign", "tree", "rock", "npc") 
 var object_type: String = "none"
 
-@export var interaction_text: String = ""            # for signs/NPCs
-@export var item_drop: String = ""                   # for items/crops/rocks
-@export var tool_required: String = ""               # "axe", "hoe", "pickaxe"
-@export var max_health: int = 1                      # for breakable things
+# --- Sprite/TileSet Configuration ---
+# Fallback for standalone images
+@export var standalone_sprite: Texture2D 
 
-# Crop-specific fields:
+# Fields to reference a tile in a TileSet
+@export var tileset: TileSet
+@export var source_id: int = -1                       # The AtlasSource ID (e.g., 0)
+@export var tile_atlas_coords: Vector2i = Vector2i(-1, -1) # The tile's grid coordinate (e.g., (4, 2))
+# ------------------------------------
+
+# --- Interaction/Gameplay Data ---
+@export var interaction_text: String = ""            
+@export var item_drop: String = ""                  
+@export var tool_required: String = ""              
+@export var max_health: int = 1                      
+
+# --- Crop-specific fields (for completeness) ---
 @export var growth_stages: Array[Texture2D] = []
 @export var growth_time: float = 0.0

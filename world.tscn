@@ -2,10 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://xy5e62krhlfl" path="res://resources/sprites/tilesets/Floors_Tiles.png" id="1_dwbse"]
 [ext_resource type="PackedScene" uid="uid://btn7pug5ptjs6" path="res://Player.tscn" id="1_f3sb7"]
-[ext_resource type="PackedScene" uid="uid://b3v8l34p2dr7c" path="res://scenes/WorldObject.tscn" id="2_fj7yv"]
 [ext_resource type="Texture2D" uid="uid://cr4f1hwwmreu3" path="res://resources/sprites/tilesets/Water_tiles.png" id="2_pkg7o"]
 [ext_resource type="Texture2D" uid="uid://dtcwd35ibkrr7" path="res://resources/sprites/tilesets/Tile.png" id="3_gbfbk"]
 [ext_resource type="Resource" uid="uid://ydcij3wbbd8" path="res://resources/data/Rock.tres" id="3_tlwt5"]
+[ext_resource type="PackedScene" uid="uid://bjsud7n5vdx62" path="res://world_object.tscn" id="6_pkg7o"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ioo17"]
 texture = ExtResource("1_dwbse")
@@ -785,6 +785,6 @@ tile_set = SubResource("TileSet_k3n1d")
 
 [node name="Player" parent="." instance=ExtResource("1_f3sb7")]
 
-[node name="WorldObject" parent="." instance=ExtResource("2_fj7yv")]
-position = Vector2(30, 5)
+[node name="WorldObject" parent="." instance=ExtResource("6_pkg7o")]
+position = Vector2(49, 24)
 data = ExtResource("3_tlwt5")

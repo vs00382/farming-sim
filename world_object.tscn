@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bjsud7n5vdx62"]
+
+[ext_resource type="Script" uid="uid://de5ii1kesda42" path="res://scripts/generics/world_object.gd" id="1_lbf83"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lbf83"]
+radius = 8.0
+
+[node name="WorldObject" type="Area2D"]
+script = ExtResource("1_lbf83")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_lbf83")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
