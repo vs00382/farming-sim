@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://cakcoevr16fi3"]
+[gd_scene load_steps=5 format=3 uid="uid://cakcoevr16fi3"]
 
 [ext_resource type="Script" uid="uid://buyr7g4dr7ftt" path="res://area_world_object.gd" id="1_rxbns"]
 [ext_resource type="AudioStream" uid="uid://bd4kbdihln4ir" path="res://resources/sounds/Coin.wav" id="2_erkix"]
+[ext_resource type="Texture2D" uid="uid://rti5o8uvxxdx" path="res://resources/sparkle.tres" id="3_c61ab"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ovbt8"]
 
@@ -15,3 +16,17 @@ shape = SubResource("CircleShape2D_ovbt8")
 
 [node name="PickupSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_erkix")
+
+[node name="PickupSparkles" type="CPUParticles2D" parent="."]
+emitting = false
+amount = 10
+texture = ExtResource("3_c61ab")
+lifetime = 0.6
+one_shot = true
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 100.0
+initial_velocity_max = 100.0
+scale_amount_min = 0.03
+scale_amount_max = 0.03
+color = Color(1.443067, 1.473327, 0.686563, 1)
