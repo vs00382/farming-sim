@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ObjectData" load_steps=3 format=3 uid="uid://ydcij3wbbd8"]
+
+[ext_resource type="Script" uid="uid://dam8ncxb8v1l1" path="res://scripts/generics/object_data.gd" id="1_f4b0m"]
+[ext_resource type="Texture2D" uid="uid://bm11t4li5gnn6" path="res://resources/sprites/garlic.png" id="2_tudhe"]
+
+[resource]
+script = ExtResource("1_f4b0m")
+id = "rock_small"
+display_name = "Small Rock"
+sprite = ""
+object_type = "rock"
+interaction_text = ""
+max_health = 3
+item_drop = "stone"
+tool_required = "pickaxe"
+metadata/_custom_type_script = "uid://dam8ncxb8v1l1"

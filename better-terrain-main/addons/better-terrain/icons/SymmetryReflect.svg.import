@@ -2,16 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bm11t4li5gnn6"
-path="res://.godot/imported/onion.png-6c06959676502c17f8a6769275ac1b9b.ctex"
+uid="uid://cxoewno1cefua"
+path="res://.godot/imported/SymmetryReflect.svg-b59bd90a26b9652fc895275795babb13.ctex"
 metadata={
+"has_editor_variant": true,
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/sprites/onion.png"
-dest_files=["res://.godot/imported/onion.png-6c06959676502c17f8a6769275ac1b9b.ctex"]
+source_file="res://better-terrain-main/addons/better-terrain/icons/SymmetryReflect.svg"
+dest_files=["res://.godot/imported/SymmetryReflect.svg-b59bd90a26b9652fc895275795babb13.ctex"]
 
 [params]
 
@@ -32,3 +33,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=true
+editor/convert_colors_with_editor_theme=false

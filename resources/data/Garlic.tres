@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="ObjectData" load_steps=3 format=3 uid="uid://6ywqi0cteabl"]
+
+[ext_resource type="Script" uid="uid://dam8ncxb8v1l1" path="res://scripts/generics/object_data.gd" id="1_f4b0m"]
+[ext_resource type="Texture2D" uid="uid://bm11t4li5gnn6" path="res://resources/sprites/garlic.png" id="2_tudhe"]
+
+[resource]
+script = ExtResource("1_f4b0m")
+id = "Garlic"
+display_name = "Garlic"
+sprite = ExtResource("2_tudhe")
+object_type = "none"
+interaction_text = ""
+item_drop = ""
+tool_required = ""
+max_health = 1
+growth_stages = Array[Texture2D]([])
+growth_time = 0.0
+metadata/_custom_type_script = "uid://dam8ncxb8v1l1"
