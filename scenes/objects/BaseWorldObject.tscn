@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://ded2ifkvn64w6"]
-
-[ext_resource type="Script" uid="uid://d32g0bjwbcu4t" path="res://scripts/objects/BaseWorldObject.gd" id="1_fchl8"]
-
-[node name="BaseWorldObject" type="Node2D"]
-script = ExtResource("1_fchl8")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]

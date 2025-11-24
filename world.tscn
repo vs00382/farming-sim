@@ -1,11 +1,13 @@
-[gd_scene load_steps=11 format=4 uid="uid://dagxdcxeoarrp"]
+[gd_scene load_steps=13 format=4 uid="uid://dagxdcxeoarrp"]
 
 [ext_resource type="Texture2D" uid="uid://xy5e62krhlfl" path="res://resources/sprites/tilesets/Floors_Tiles.png" id="1_dwbse"]
 [ext_resource type="PackedScene" uid="uid://btn7pug5ptjs6" path="res://Player.tscn" id="1_f3sb7"]
 [ext_resource type="Texture2D" uid="uid://cr4f1hwwmreu3" path="res://resources/sprites/tilesets/Water_tiles.png" id="2_pkg7o"]
 [ext_resource type="Texture2D" uid="uid://dtcwd35ibkrr7" path="res://resources/sprites/tilesets/Tile.png" id="3_gbfbk"]
 [ext_resource type="Resource" uid="uid://ydcij3wbbd8" path="res://resources/data/Rock.tres" id="3_tlwt5"]
-[ext_resource type="PackedScene" uid="uid://bjsud7n5vdx62" path="res://world_object.tscn" id="6_pkg7o"]
+[ext_resource type="PackedScene" uid="uid://erwebk5np4n3" path="res://scenes/objects/StaticWorldObject.tscn" id="5_dwbse"]
+[ext_resource type="PackedScene" uid="uid://cakcoevr16fi3" path="res://scenes/objects/AreaWorldObject.tscn" id="7_gbfbk"]
+[ext_resource type="Resource" uid="uid://dq4w7y3osimf2" path="res://resources/data/Carrot.tres" id="8_gbfbk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ioo17"]
 texture = ExtResource("1_dwbse")
@@ -777,6 +779,7 @@ metadata/_better_terrain = {
 }
 
 [node name="World" type="Node2D"]
+position = Vector2(1, 0)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(37, -4)
@@ -785,6 +788,10 @@ tile_set = SubResource("TileSet_k3n1d")
 
 [node name="Player" parent="." instance=ExtResource("1_f3sb7")]
 
-[node name="WorldObject" parent="." instance=ExtResource("6_pkg7o")]
-position = Vector2(49, 24)
+[node name="Rock" parent="." instance=ExtResource("5_dwbse")]
+position = Vector2(56, 10)
 data = ExtResource("3_tlwt5")
+
+[node name="Carrot" parent="." instance=ExtResource("7_gbfbk")]
+position = Vector2(33, 39)
+data = ExtResource("8_gbfbk")
