@@ -76,5 +76,5 @@ object_type = "item"
 tileset = SubResource("TileSet_gpg0i")
 source_id = 0
 tile_atlas_coords = Vector2i(4, 3)
-item_drop = "carrot"
+item_drop = "carrot_seed"
 metadata/_custom_type_script = "uid://dam8ncxb8v1l1"

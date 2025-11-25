@@ -10,6 +10,8 @@ var item_definitions: Dictionary = {}
 # Signal to notify the UI or other systems when the inventory changes
 signal inventory_changed(item_id, new_quantity)
 
+
+
 # --- Setup ---
 
 func _ready():
@@ -22,12 +24,15 @@ func load_item_definitions():
 	# Replace these paths with the actual locations of your ItemData resources
 	var stone_resource = load("res://Resources/Items/Stone.tres")
 	var basic_seed_resource = load("res://Resources/Items/BasicSeed.tres")
+	var carrot_seed = load("res://resources/data/inventory/CarrotSeedItem.tres")
 	
 	# Example loading logic
 	if stone_resource:
 		item_definitions[stone_resource.item_id] = stone_resource
 	if basic_seed_resource:
 		item_definitions[basic_seed_resource.item_id] = basic_seed_resource
+	if carrot_seed:
+		item_definitions[carrot_seed.item_id] = carrot_seed
 		
 	print("Inventory: Loaded %d item definitions." % item_definitions.size())
 

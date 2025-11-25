@@ -2,7 +2,8 @@
 extends Node
 
 # --- Core Systems ---
-@onready var inventory_manager = $Inventory # Will reference the Inventory node
+var inventory_manager: Node
+
 @onready var time_manager = $TimeManager # (Optional: If we split time logic later)
 
 # --- Debt Clock Variables (from Feature 1) ---
@@ -20,16 +21,19 @@ signal day_passed()
 signal payment_due()
 
 func _ready():
-	# Check that the Inventory node is actually present
+	# Wait for the first frame cycle to ensure the scene tree is constructed.
+	# This prevents the Autoload from crashing on scene initialization.
+	await get_tree().process_frame
+	
+	# Now try to find the Inventory node using its correct path
+	inventory_manager = get_node_or_null("/root/World/GameManagerSetup/Inventory") 
+	
 	if inventory_manager:
-		print("GameManager initialized and referencing Inventory.")
+		print("GameManager successfully found the Inventory node.")
+		# Optional: You can also call inventory_manager.load_item_definitions() here
 	else:
-		push_error("GameManager: Inventory node is missing or incorrectly named!")
-	
-	# Optional: Initial UI update call if a UI is listening
-	
-# --- Time Progression Logic (The main loop driver) ---
-
+		push_error("CRITICAL ERROR: Inventory node not found at path /root/World/GameManagerSetup/Inventory")
+		
 # Called when the player chooses to sleep or ends the day
 func pass_day():
 	if !is_day_active:
@@ -43,7 +47,7 @@ func pass_day():
 	days_until_payment -= 1
 	
 	# 2. Inform the world (Tells crops to grow, weather to update)
-	day_passed.emit() 
+	day_passed.emit()
 	
 	# 3. Check for Payment
 	if days_until_payment <= 0:
@@ -53,10 +57,10 @@ func pass_day():
 	# 4. Handle Season Change (Simple 90-day cycle for now)
 	if current_day % 90 == 0:
 		# Logic to change season (e.g., Spring -> Summer -> Fall -> Winter)
-		pass 
+		pass
 		
 	# Introduce a brief delay (fade to black) then set is_day_active = true
-	await get_tree().create_timer(1.0).timeout 
+	await get_tree().create_timer(1.0).timeout
 	is_day_active = true
 	print("--- Day %d starts. Days until payment: %d ---" % [current_day, days_until_payment])
 

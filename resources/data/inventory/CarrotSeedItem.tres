@@ -4,4 +4,6 @@
 
 [resource]
 script = ExtResource("1_x2w1v")
+item_id = "carrot_seed"
+item_name = "Carrot Seed"
 metadata/_custom_type_script = "uid://deqpumkvn2xj4"
