@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://cjk8f678dyrr2"]
+
+[ext_resource type="Script" uid="uid://duy4ptk7dqrhb" path="res://scripts/inventory/InventoryItemEntry.gd" id="1_4vw1r"]
+
+[node name="InventoryItemEntry" type="HBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_4vw1r")
+
+[node name="NameLabel" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="QuantityLabel" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3

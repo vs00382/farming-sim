@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://bhtbrwjs3wrwq"]
+
+[ext_resource type="Script" uid="uid://bsqwhrkr5ax0h" path="res://scripts/inventory/InventoryUI.gd" id="1_wqexf"]
+
+[node name="InventoryUI" type="Control"]
+custom_minimum_size = Vector2(150, 250)
+layout_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -640.0
+offset_right = -640.0
+grow_horizontal = 0
+script = ExtResource("1_wqexf")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ItemListContainer" type="VBoxContainer" parent="Panel/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
