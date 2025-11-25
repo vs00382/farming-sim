@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://dagxdcxeoarrp"]
+[gd_scene load_steps=14 format=4 uid="uid://dagxdcxeoarrp"]
 
 [ext_resource type="Texture2D" uid="uid://xy5e62krhlfl" path="res://resources/sprites/tilesets/Floors_Tiles.png" id="1_dwbse"]
 [ext_resource type="PackedScene" uid="uid://btn7pug5ptjs6" path="res://Player.tscn" id="1_f3sb7"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://erwebk5np4n3" path="res://scenes/objects/StaticWorldObject.tscn" id="5_dwbse"]
 [ext_resource type="PackedScene" uid="uid://cakcoevr16fi3" path="res://scenes/objects/AreaWorldObject.tscn" id="7_gbfbk"]
 [ext_resource type="Resource" uid="uid://dq4w7y3osimf2" path="res://resources/data/Carrot.tres" id="8_gbfbk"]
+[ext_resource type="PackedScene" uid="uid://d063f8vimawt0" path="res://scenes/GlobalData.tscn" id="9_ioo17"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ioo17"]
 texture = ExtResource("1_dwbse")
@@ -795,3 +796,5 @@ data = ExtResource("3_tlwt5")
 [node name="Carrot" parent="." instance=ExtResource("7_gbfbk")]
 position = Vector2(33, 39)
 data = ExtResource("8_gbfbk")
+
+[node name="GameManagerSetup" parent="." instance=ExtResource("9_ioo17")]
